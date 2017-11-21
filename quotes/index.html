@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Random Quote Machine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <style>
+        blockquote { 
+            font-family: 'Playfair Display', sans-serif;
+            background-color: #e6fee6;
+        }
+        h1 { margin-top: 10px; }
+        @media screen and (min-width: 768px) { 
+            blockquote { font-size: 24px; }
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="quotes.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row page-header">
+            <div class="col-xs-4 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-2">
+                <a href="#" role="button" class="btn btn-primary btn-lg btn-block" target="_blank" id="tweet">
+                    <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span class="hidden-xs">Tweet</span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <h1 class="hidden-xs text-center">Quotes</h1>
+                <h3 class="visible-xs-block text-center">Quotes</h3>
+            </div>
+            <div class="col-xs-4 col-sm-3 col-md-2">
+                <button type="button" class="btn btn-warning btn-lg btn-block" id="refr" disabled>
+                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> <span class="hidden-xs">New</span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                <blockquote id="blk"><p id="qtxt"> </p>
+                    <footer id="qauth"> </footer>
+                </blockquote>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <p class="text-center">Prepared for FCC Random Quotes Machine project by <a href="https://github.com/alper4"> <img src="../GitHub-Mark-32px.png" alt="Octocat!"></a></p>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

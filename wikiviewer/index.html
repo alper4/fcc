@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>A Wikipedia Viewer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <h2 class="page-header text-center">A Wikipedia Viewer</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" autocomplete="off" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        <a href="https://en.wikipedia.org/wiki/Special:Random" role="button" class="btn btn-warning" target="_blank">Random</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2"><p>
+                <table class="table table-striped">
+                    <tbody>
+                    </tbody>
+                </table></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <p class="text-center">Prepared for FCC A Wikipedia Viewer project by <a href="https://github.com/alper4"> <img src="../GitHub-Mark-32px.png" alt="Octocat!"></a></p>
+          </div>
+        </div>   
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="wikiviewer.js"></script>
+  </body>
+</html>
