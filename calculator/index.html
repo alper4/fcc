@@ -8,46 +8,7 @@
     <title>A Javascript Calculator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet"> 
-    <style>
-      .calc {
-        width: 300px;
-        background-color: #fff5e6;
-        border: 2px solid #ffebcd;
-        border-radius: 5px;
-      }
-      .btn-primary:focus {
-        color: #fff;
-        background-color: #337ab7;
-        border-color: #2e6da4;
-      }
-      .btn-lg {
-        width: 45px;
-        height: 36px;
-        margin-right: 3px;
-        margin-left: 3px;
-        padding-top: 5px;
-        font-family: 'Russo One', 'Helvetica Neue', Helvetica, Arial;
-      }
-      h3 { 
-        font-family: 'Russo One', monospace;
-        font-size: 36px;
-        margin-top: 10px;
-        margin-bottom: 4px;
-      }
-      .AC { padding-left: 9px; }
-      .radic { font-weight: bold; }
-      .disp { 
-        width: 270px; 
-        background-color: #f2f2f2;
-        border: 2px solid lightgrey;
-        border-radius: 5px;
-        margin-bottom: 30px;
-      }
-      samp { 
-        color: darkorange;
-        margin-right: 16px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 	<div class="container">
@@ -102,7 +63,7 @@
           <button class="btn btn-primary btn-lg" name="rakam" value="1" type="button">1</button>
           <button class="btn btn-primary btn-lg" name="rakam" value="2" type="button">2</button>
           <button class="btn btn-primary btn-lg" name="rakam" value="3" type="button">3</button>
-          <button class="btn btn-primary btn-lg" name="op" value="sub" type="button">&minus;</button><p></p>
+          <button class="btn btn-primary btn-lg" name="op" value="çıkr" type="button">&minus;</button><p></p>
         </div>
       </div>
       <div class="row">
@@ -111,7 +72,7 @@
           <button class="btn btn-primary btn-lg" name="rakam" value="0" type="button">0</button>
           <button class="btn btn-primary btn-lg" name="nokta" value="." type="button">&sdot;</button>
           <button class="btn btn-primary btn-lg" name="hesapla" type="button">=</button>
-          <button class="btn btn-primary btn-lg" name="op" value="ekle" type="button">+</button><p class="lead"> </p>
+          <button class="btn btn-primary btn-lg" name="op" value="topl" type="button">+</button><p class="lead"> </p>
         </div>
       </div>
 
