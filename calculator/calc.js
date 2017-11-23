@@ -81,10 +81,48 @@
                 this.lcd = "";
                 this.nokta = false;
                 this.op = '=';
+            },
+
+            kkök: function () {
+                if (this.E) return;
+                let kkarg;
+                if (this.op == undefined)
+                    kkarg = Number(this.lcd);
+                else 
+                    kkarg = this.accu;
+                this.op = 'kk';
+                this.sDispatch.oper.call(this, kkarg);
+                $(".opsign").text("");
+                this.lcdUsed = 0;
+                this.lcd = "";
+                this.nokta = false;              
+            },
+
+            clear: function() {
+                if (this.E) {
+                    this.E = false;
+                    $(".Esign").text("");
+                }
+                else if (this.op == undefined || this.lcdUsed == 0) {
+                    this.lcdUsed = 1;
+                    this.nokta = false;
+                    this.lcd = "0";
+                    this.accu = 0;
+                    this.op = undefined;
+                    $(".opsign").text("");
+                    $("#lcd").text(this.lcd);                  
+                }
+                else {
+                    this.lcdUsed = 1;
+                    this.nokta = false;
+                    this.lcd = "0";
+                    $("#lcd").text(this.lcd); 
+                }
             }
         },
         sDispatch: {
-            oper: function () {
+            oper: function (kkarg) {
+                var kkE = false;
                 switch(this.op) {
                     case '+': 
                         this.accu += Number(this.lcd);
@@ -98,10 +136,16 @@
                     case '/':
                         this.accu /= Number(this.lcd);
                         break;
+                    case 'kk':
+                        if (kkarg < 0)
+                            kkE = true;
+                        this.accu = Math.sqrt(Math.abs(kkarg));
+                        break;
                 }
                 let [norm, E] = düzelt(this.accu, this.lcdCap);
                 $("#lcd").text(norm);
-                if (E) {
+                if (E || kkE) {
+                    this.accu = Number(norm);
                     $(".Esign").text("E");
                     this.E = true;
                 }
@@ -118,6 +162,8 @@
     $("button[name='aclr']").click(function () { mach.allClear(); });
     $("button[name='op']").click(function () { mach.oper(this.value); });
     $("button[name='opEql']").click(function () { mach.opEql(); });
+    $("button[name='kkök']").click(function () { mach.kkök(); });
+    $("button[name='clr']").click(function () { mach.clear(); });
 
     function düzelt(num, cap) {
         var sp = num.toString().split('.');
@@ -137,6 +183,5 @@
                 return [sp[0].concat('.') + sp[1].substr(0, cap - sp[0].length), false];
         }
     }
-
 
 })();
