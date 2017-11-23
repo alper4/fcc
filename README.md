@@ -1,4 +1,5 @@
 This is my workbench for [FCC](https://www.freecodecamp.org/) projects and challenges (visit the Wiki for algorithmic challenges).
+- [A Javascript Calculator](https://alper4.github.io/fcc/calculator/)
 - [Twitchtv JSON API](https://alper4.github.io/fcc/twitchtv/)
 - [A Wikipedia Viewer](https://alper4.github.io/fcc/wikiviewer/)
 - [The Local Weather](https://alper4.github.io/fcc/weather/)
