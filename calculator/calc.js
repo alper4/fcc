@@ -26,6 +26,7 @@
                     ++this.lcdUsed;
                 }
                 $("#lcd").text(this.lcd);
+                if (this.op == '=') this.op == undefined;
             },
 
             nokta: function (val) {
@@ -41,6 +42,7 @@
                 this.lcd = this.lcd.concat(val);
                 this.nokta = true;
                 $("#lcd").text(this.lcd);
+                if (this.op == '=') this.op == undefined;
             },
 
             allClear: function () {
@@ -95,7 +97,7 @@
                 $(".opsign").text("");
                 this.lcdUsed = 0;
                 this.lcd = "";
-                this.nokta = false;              
+                this.nokta = false;
             },
 
             clear: function() {
