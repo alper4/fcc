@@ -158,7 +158,7 @@
 
     var mach = new Stately(fsm);
     mach.init();
-    
+    $('[data-toggle="tooltip"]').tooltip();
     $("button[name='rakam']").click(function () { mach.rakam(this.value); });
     $("button[name='nokta']").click(function () { mach.nokta(this.value); });
     $("button[name='aclr']").click(function () { mach.allClear(); });
