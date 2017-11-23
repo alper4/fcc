@@ -32,8 +32,20 @@
     border-radius: 5px;
     margin-bottom: 30px;
   }
+  .slim {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .opsign { padding-top: 16px; }
+  .Esign { 
+    padding-top: 3px;
+    padding-left: 4px;
+  }
   samp { 
     color: darkorange;
     margin-right: 16px;
+  }
+  body { 
+    background: linear-gradient(to right, lavender, lightslategray, lavender);
   }
   
