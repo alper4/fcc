@@ -1,10 +1,14 @@
 (() => {
     var lang = "en";
-    
+    $("input[name='lang']").change(function () {
+        lang = $(this).val();
+        $(".input-group-btn a").attr("href", `https://${lang}.wikipedia.org/wiki/Special:Random`);
+        });
     $("button").click( () => {
         $(".input-group input").attr("disabled", true);
         $(".input-group-btn button").attr("disabled", true);
         $(".input-group-btn a").attr("href", "#");
+        $(".btn-sm").toggleClass("disabled");
         $.ajax({
             url: `https://${lang}.wikipedia.org/w/api.php`,
             data: { action: "opensearch",
@@ -19,7 +23,8 @@
                     .appendTo("tbody");
                 $(".input-group input").removeAttr("disabled");
                 $(".input-group-btn button").removeAttr("disabled");
-                $(".input-group-btn a").attr("href", "https://en.wikipedia.org/wiki/Special:Random");
+                $(".input-group-btn a").attr("href", `https://${lang}.wikipedia.org/wiki/Special:Random`);
+                $(".btn-sm").toggleClass("disabled");
             }
         });
     });
