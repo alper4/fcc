@@ -49,7 +49,7 @@
             elapsed = 0;
             $(".progress-bar").css("width", "100%")
                               .removeClass("progress-bar-success")
-                              .addClass("progress-bar-info active");
+                              .addClass("active");
             tmId = window.setInterval(cbTmr, 1000);
             timerOn = true;
             work = true;
@@ -78,7 +78,6 @@
             totSec = tmMin * 60;
             elapsed = 0;
             $(".progress-bar").css("width", "100%")
-                              .removeClass("progress-bar-info")
                               .addClass("progress-bar-success active");
             tmId = window.setInterval(cbTmr, 1000);
             timerOn = true;
