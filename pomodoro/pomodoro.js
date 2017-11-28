@@ -113,8 +113,7 @@
         
         ++elapsed;
         $(".progress-bar").text(`${tmMin}:${tmSec<10?0:''}${tmSec}`);
-        let prs = 100 - Math.floor(elapsed/totSec*100);
-        $(".progress-bar").css("width",  (prs > 10 ? prs : 10) + "%");
+        $(".progress-bar").css("width", 100 - Math.floor(elapsed/totSec*100) + "%");
     }
     
 })();
