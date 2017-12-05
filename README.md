@@ -1,4 +1,6 @@
 This is my workbench for [FCC](https://www.freecodecamp.org/) projects and challenges (visit the Wiki for algorithmic challenges).
+- [A Simon Game](https://alper4.github.io/fcc/simon/)
+- [A Tic Tac Toe Game](https://alper4.github.io/fcc/tictactoe/)
 - [A Pomodoro Clock](https://alper4.github.io/fcc/pomodoro/)
 - [A Javascript Calculator](https://alper4.github.io/fcc/calculator/)
 - [Twitchtv JSON API](https://alper4.github.io/fcc/twitchtv/)
