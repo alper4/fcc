@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+    
+    </style>
+  </head>
+  <body>
+	<div class="container" style="width: 850px">
+    <div class="row page-header">
+      <div class="col-xs-10">
+        <h2 class="text-center">Tic Tac Toe</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 text-right">
+        <button type="button" class="btn btn-primary btn-lg"> O </button>
+        <h1>You</h1>
+        <button type="button" class="btn btn-primary">begin</button>
+      </div>
+      <div class="col-xs-4">
+        <img src="tahta.png" alt="Game board" usemap="#slots">
+        <map name="slots">
+          <area shape="rect" coords="8,9,72,74" href="#" alt="0">
+          <area shape="rect" coords="91,9,155,74" href="#" alt="1">
+          <area shape="rect" coords="177,9,241,74" href="#" alt="2">
+          <area shape="rect" coords="8,92,72,156" href="#" alt="3">
+          <area shape="rect" coords="91,92,155,156" href="#" alt="4">
+          <area shape="rect" coords="177,92,241,156" href="#" alt="5">
+          <area shape="rect" coords="8,176,72,240" href="#" alt="6">
+          <area shape="rect" coords="91,176,155,240" href="#" alt="7">
+          <area shape="rect" coords="177,176,241,240" href="#" alt="8">          
+        </map>
+        <img src="x.png" style="z-index: -1; position: absolute; left:18px; top:8px">
+        <img src="x.png" style="z-index: -1; position: absolute; left:104px; top:8px">
+        <img src="x.png" style="z-index: -1; position: absolute; left:190px; top:8px">
+        <img src="x.png" style="z-index: -1; position: absolute; left:18px; top:91px">
+        <img src="x.png" style="z-index: -1; position: absolute; left:104px; top:91px">
+        <img src="x.png" style="z-index: -1; position: absolute; left:190px; top:91px">
+        <img src="x.png" style="z-index: -1; position: absolute; left:18px; top:175px">
+        <img src="x.png" style="z-index: -1; position: absolute; left:104px; top:175px">
+        <img src="x.png" style="z-index: -1; position: absolute; left:190px; top:175px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:18px; top:8px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:104px; top:8px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:190px; top:8px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:18px; top:91px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:104px; top:91px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:190px; top:91px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:18px; top:175px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:104px; top:175px">
+        <img src="o.png" style="z-index: -1; position: absolute; left:190px; top:175px">
+      </div>
+      <div class="col-xs-3 text-left">
+        <button type="button" class="btn btn-warning btn-lg"> X </button>
+        <h1>Computer</h1>
+        <button type="button" class="btn btn-warning">begin</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <p class="text-center">Prepared for FCC Tic Tac Toe Game project by <a href="https://github.com/alper4"> <img src="../GitHub-Mark-32px.png" alt="Octocat!"></a></p>
+      </div>
+    </div>
+	</div>
+  <div class="modal fade" id="gWin" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <h3 class="text-center"></h3>
+        </div>
+      </div>
+    </div>
+  </div><!-- modal -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="tictactoe.js"></script>
+  </body>
+</html>
