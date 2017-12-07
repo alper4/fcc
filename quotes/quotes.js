@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 $(document).ready( () => {
     $.getJSON("quotes.txt", qs => {
         $("#refr").click( () => {
