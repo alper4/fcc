@@ -2,7 +2,7 @@
     var endp = "https://wind-bow.glitch.me/twitch-api/";
     var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "iFlynn", "AhornFPS", "noobs2ninjas"];
     
-    for (let u of users)
+    let getPlayers = function(u) {
         $.getJSON(`${endp}users/${u}`, udata => {
             if ("_id" in udata) {
                 let uicon = `${udata.logo === null ? '<h1 class="text-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></h1>' : `<img src="${udata.logo}" class="img-responsive img-circle" width="64" height="64" alt="logo">` }`;
@@ -33,6 +33,9 @@
                    </tr>`).appendTo("tbody");
                 $('[title="No such user"]').last().tooltip();
             }
-        });
+    }); };
+        
+    for (let u of users)
+        getPlayers(u);
     
 })();
