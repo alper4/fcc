@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 (function() {
     var tmMin, tmSec, timerOn=false, timerPaused=false, tmId, totSec, elapsed, work;
     $("button:eq(0)").click(function() {
@@ -89,8 +90,8 @@
     });
     
     function cbTmr() {
-        if (tmSec == 0)
-            if (tmMin == 0) {
+        if (tmSec === 0)
+            if (tmMin === 0) {
                 window.clearInterval(tmId);
                 $(".progress-bar").removeClass("active");
                 timerOn = false;
