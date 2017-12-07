@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 (() => {
     var lang = "en";
     $("input[name='lang']").change(function () {
