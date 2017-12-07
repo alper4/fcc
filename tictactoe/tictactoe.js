@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 (function() {
     var inGame = false, step, gLine = [], imgO = [], imgX = [];
     var vacant = [], usr, cmptr;
