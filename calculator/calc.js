@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 (() => {
     var fsm = {
         "sInit": {
@@ -34,7 +35,7 @@
                 if (this.nokta || this.lcdUsed == this.lcdCap)
                     return;
 
-                if (this.lcdUsed == 0) {
+                if (this.lcdUsed === 0) {
                     this.lcd = "0";
                     ++this.lcdUsed;
                 }
@@ -60,7 +61,7 @@
             oper: function (op) {
                 if (this.E) return;
                 $(".opsign").html(`<kbd>${op}</kbd>`);
-                if (this.op == undefined)
+                if (this.op === undefined)
                     this.accu = Number(this.lcd);
                 else if (this.lcdUsed > 0)
                     this.sDispatch.oper.call(this);
@@ -73,7 +74,7 @@
 
             opEql: function () {
                 if (this.E) return;
-                if (this.op == undefined)
+                if (this.op === undefined)
                     return;
                 else if (this.lcdUsed > 0)
                     this.sDispatch.oper.call(this);
@@ -88,7 +89,7 @@
             kkök: function () {
                 if (this.E) return;
                 let kkarg;
-                if (this.op == undefined)
+                if (this.op === undefined)
                     kkarg = Number(this.lcd);
                 else 
                     kkarg = this.accu;
@@ -105,7 +106,7 @@
                     this.E = false;
                     $(".Esign").text("");
                 }
-                else if (this.op == undefined || this.lcdUsed == 0) {
+                else if (this.op === undefined || this.lcdUsed === 0) {
                     this.lcdUsed = 1;
                     this.nokta = false;
                     this.lcd = "0";
