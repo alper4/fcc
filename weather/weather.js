@@ -1,14 +1,15 @@
+/* jshint esversion: 6 */
 if ("geolocation" in navigator) {
   const cSign = "&#8451";
   const fSign = "&#8457";
-  var temp;
+  let temp;
   
-  function showTemp() {
+  let showTemp = function () {
     if ($("input[name='unit']:checked").val() == "F")
         $("#outp h1").html("<strong>" + Math.round(temp*9/5 + 32) + "</strong>" + fSign);
     else
         $("#outp h1").html("<strong>" + Math.round(temp) + "</strong>" + cSign);
-  }
+  };
   
   $("#refr").click( () => {
     $("#refr").attr("disabled", true);
