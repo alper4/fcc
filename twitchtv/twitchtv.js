@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 (() => {
     var endp = "https://wind-bow.glitch.me/twitch-api/";
     var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "iFlynn", "AhornFPS", "noobs2ninjas"];
